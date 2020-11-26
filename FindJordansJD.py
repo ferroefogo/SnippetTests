@@ -1,4 +1,4 @@
-# Make program to scrape through JD and find discounts on jordans.
+# Make program to scrape through JD and find jordans of x size
 # Include creation of account and log in.
 import webbrowser
 import requests
@@ -11,74 +11,57 @@ def fillRegister():
     while alreadyRegistered == False:
         # Finds register button on page
         registerElem = browser.find_element_by_id('')
-        type(registerElem)
         registerElem.click()
 
         # Finds Field Element and Fills it in.
         fNameElem = browser.find_element_by_id('firstName')  # Field Name Finder
-        type(fNameElem)
-        fNameElem.send_keys('Marco')  # Fills in the Field with 'Marco'
+        fNameElem.send_keys('First Name Here')
 
         surnameElem = browser.find_element_by_id('lastName')
-        type(surnameElem)
-        surnameElem.send_keys('Fernandes')
+        surnameElem.send_keys('Surname Here')
 
         emailElem = browser.find_element_by_id('username')
-        type(emailElem)
-        emailElem.send_keys('marcoff2002@gmail.com')
+        emailElem.send_keys('email address here')
 
         telephoneElem = browser.find_element_by_id('phone')
-        type(telephoneElem)
-        telephoneElem.send_keys('7888981342')
+        telephoneElem.send_keys('phone number here')
 
         passwordElem = browser.find_element_by_id('password')
-        type(passwordElem)
-        passwordElem.send_keys('HR29sdQC.Aq/KNg')
+        passwordElem.send_keys('password')
 
         confirm_passwordElem = browser.find_element_by_id('confirmPassword')
-        type(confirm_passwordElem)
-        confirm_passwordElem.send_keys('HR29sdQC.Aq/KNg')
+        confirm_passwordElem.send_keys('confirm password')
 
         countryElem = Select(browser.find_element_by_id('country'))
-        type(countryElem)
-        countryElem.select_by_visible_text('United Kingdom (excluding Channel Islands)')
+        countryElem.select_by_visible_text('country here')
 
         manualAddressElem = browser.find_element_by_id('showAutoCompletables')
-        type(manualAddressElem)
         manualAddressElem.click()
 
         postcodeElem = browser.find_element_by_id('postcode')
-        type(postcodeElem)
-        postcodeElem.send_keys('RH11 8UG')
+        postcodeElem.send_keys('postcode')
 
         address1Elem = browser.find_element_by_id('address1')
-        type(address1Elem)
-        address1Elem.send_keys('2, Wiston Court')
+        address1Elem.send_keys('address1')
 
         address2Elem = browser.find_element_by_id('address2')
-        type(address2Elem)
-        address2Elem.send_keys('Cuckfield Close')
+        address2Elem.send_keys('address2')
 
         townElem = browser.find_element_by_id('town')
-        type(townElem)
-        townElem.send_keys('Crawley')
+        townElem.send_keys('town')
 
         countyElem = browser.find_element_by_id('billingCountyInp')
-        type(countyElem)
-        countyElem.send_keys('West Sussex')
+        countyElem.send_keys('county')
 
         # Press Register Button
         registerButtonElem = browser.find_element_by_class('btn btn-level1 large')
-        type(registerButtonElem)
         registerButtonElem.click()
     else:
         loginElem = browser.find_element_by_id('username')
-        type(loginElem)
-        loginElem.send_keys('marcoff2002@gmail.com')
+        loginElem.send_keys('username')
 
         passElem = browser.find_element_by_id('password')
-        type(passElem)
-        passElem.send_keys('HR29sdQC.Aq/KNg')
+        passElem.send_keys('password')
 
         # Click the Sign In Button
         signInElem = browser.find_element_by_id('doLogin')
